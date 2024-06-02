@@ -12,17 +12,17 @@ class _BillscreenState extends State<Billscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         leading: InkWell(
             onTap: () {
               Navigator.of(context).pop('/');
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back,
               color: Colors.white,
             )),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Bill',
           style: TextStyle(color: Colors.white),
         ),
@@ -41,7 +41,7 @@ class _BillscreenState extends State<Billscreen> {
                   amount = (amount + price) * qty;
                 }
               },
-              child: Icon(
+              child: const Icon(
                 Icons.file_download_outlined,
                 color: Colors.white,
               ))
@@ -54,8 +54,8 @@ class _BillscreenState extends State<Billscreen> {
                 productlist.length,
                 (index) => Center(
                       child: Container(
-                        margin: EdgeInsets.all(15),
-                        padding: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(10),
                         height: 260,
                         width: 300,
                         color: Colors.white,
@@ -67,21 +67,21 @@ class _BillscreenState extends State<Billscreen> {
                                     productlist.removeAt(index);
                                   });
                                 },
-                                child: Align(
+                                child: const Align(
                                     alignment: Alignment.centerRight,
                                     child: Icon(Icons.close))),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             box('Product Name', productlist[index].proname!),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
-                            box('Qunatiy', productlist[index].qty!),
-                            SizedBox(
+                            box('Quantity', productlist[index].qty!),
+                            const SizedBox(
                               height: 5,
                             ),
                             box('Price', productlist[index].price!),
@@ -105,8 +105,8 @@ class _BillscreenState extends State<Billscreen> {
         child: Container(
           height: 40,
           width: 50,
-          color: Colors.black,
-          child: Center(
+          color: Colors.blue,
+          child: const Center(
               child: Text(
             'Add',
             style: TextStyle(color: Colors.white),
@@ -120,10 +120,10 @@ class _BillscreenState extends State<Billscreen> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(width: 1, color: Colors.black),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(width: 2, color: Colors.purple),
         ),
         label: Text(label),

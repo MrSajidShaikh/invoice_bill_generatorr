@@ -13,7 +13,7 @@ class _HomebillscreenState extends State<Homebillscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blue,
         leading: const Icon(
           Icons.menu,
           color: Colors.white,
@@ -88,7 +88,7 @@ class _HomebillscreenState extends State<Homebillscreen> {
           height: 40,
           width: 100,
           decoration: BoxDecoration(
-              color: Colors.black, borderRadius: BorderRadius.circular(10)),
+              color: Colors.blue, borderRadius: BorderRadius.circular(10)),
           child: const Center(
               child: Text(
             'Add',
